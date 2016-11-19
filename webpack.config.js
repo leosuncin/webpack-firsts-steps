@@ -31,6 +31,25 @@ module.exports = {
 				loader: 'babel',
 				exclude: /node_modules/,
 			},
+			{
+				test: /\.css$/i,
+				loaders: [
+					'style',
+					'css?sourceMap',
+				],
+			},
+			{
+				test: /\.s[ac]ss$/i,
+				loaders: [
+					'style',
+					'css',
+					'sass?sourceMap',
+				]
+			},
+			{
+				test: /\.(jpg|jpeg|webp|png|gif|svg)/i,
+				loader: 'file?name=images/[name].[ext]',
+			},
 		],
 	},
 	plugins: [

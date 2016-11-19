@@ -1,3 +1,5 @@
+import '../styles/main.css'
+
 class Person {
 	constructor(nombre = 'Fulano', apellido = 'Mengano') {
 		this.nombre = nombre
