@@ -3,7 +3,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
 	entry: {
-		main: resolve('src/scripts/main.js'),
+		main: [
+			'webpack/hot/dev-server',
+			`webpack-dev-server/client?http://0.0.0.0:8080/`,
+			resolve('src/scripts/main.js'),
+		],
 	},
 	output: {
 		path: resolve('dist'),
@@ -11,6 +15,13 @@ module.exports = {
 		publicPath: '/',
 	},
 	plugins: [
+		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin(),
 	],
+	devServer: {
+		contentBase: resolve('dist'),
+		hot: true,
+		inline: true,
+		open: true,
+	},
 }

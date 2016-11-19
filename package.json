@@ -9,6 +9,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-    "build": "webpack"
+    "build": "webpack",
+    "start": "webpack-dev-server"
   }
 }
