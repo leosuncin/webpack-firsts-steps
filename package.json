@@ -4,9 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^1.13.3"
+    "html-webpack-plugin": "^2.24.1",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
   },
   "scripts": {
-  	"build": "webpack"
+    "build": "webpack"
   }
 }
