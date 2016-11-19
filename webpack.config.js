@@ -18,6 +18,13 @@ module.exports = {
 	},
 	devtool: 'source-map',
 	module: {
+		preLoaders: [
+			{
+				test: /\.js$/i,
+				loader: 'eslint',
+				exclude: /node_modules/,
+			},
+		],
 		loaders: [
 			{
 				test: /\.js$/i,
